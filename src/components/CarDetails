@@ -1,0 +1,52 @@
+/*import React, { useState } from "react";
+import apiURL from "../api";
+import { UpdateForm } from "./UpdateForm";
+
+export const CarDetails = ({car, setCarDetails}) => {
+    const [updateForm, setUpdateForm] = useState(false);
+
+    const showForm = () => {
+        setUpdateForm(!updateForm);
+    }
+
+    const getAllCars = () => {
+        setCarDetails();
+    }
+
+    async function onDelete() {
+
+        try {
+            const res = await fetch(`${apiURL}/cars/${car.id}`, {
+                method: "DELETE"
+            });
+            await res.json();
+            if(res.ok) {
+                setCarDetails();
+            } else {
+                throw new Error('Something went wrong!')
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    return <>
+       <button className="button view-all" onClick={getAllCars}>View all Cars</button>
+        <div className="details">
+            <img className="details-image" src={car.image} alt={car.title} />
+            <div className="details-car">
+                <h3>{car.title}</h3>
+                <br />
+                <p><b>Price:</b> £{car.price}</p>
+                <br></br>
+                <p><b>Category:</b> {car.category}</p>
+                <br></br>
+                <p><b>Description:</b> {car.description}</p>
+                <div className="buttons-wrapper">
+                    <button className="button"  onClick={showForm}>Update Car</button>
+                    <button className="button"  onClick={onDelete}>Delete Car</button>
+                </div>
+            </div>
+           {updateForm && <UpdateForm car={car} setCarDetails={setCarDetails} />}
+        </div>
+    </>}*/
