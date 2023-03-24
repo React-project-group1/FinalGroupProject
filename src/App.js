@@ -1,15 +1,10 @@
 import logo from './PBS.jpg';
-import './style.css'
-//import {Link } from "react-router-dom";
+import './App.css'
 import React, { useState, useEffect } from 'react';
-import { CarsList } from './components/CarsList';
-//import { CarDetails } from './CarDetails';
-import { Form } from './components/Form';
-import { Navigation } from './components/Navigation'
-import { CarGrid } from './components/CarGrid';
+import Auth from './components/Auth';
 import AppRouter from './components/AppRouter';
+import { Navigation } from './components/Navigation'
 function App() {
-  <AppRouter />
   const [cars, setCars] = useState([]);
 	//const [carDetails, setCarDetails] = useState('');
 	const [form, setForm] = useState(false);
@@ -21,25 +16,11 @@ function App() {
     <main>
     <div className='header'>
       <img src={logo}    className="logo" alt="logo" />
-        <br/>
+        <Navigation/>
+        <AppRouter/>
         
-        {/*!form && !carDetails ? 
-				<button className='button add-button' onClick={toggleForm}>Add Car</button> 
-  : null*/}
-			</div>
-      <div>
-          <Navigation/>
-          <CarGrid/>
-      </div>
-			{/*form && <Form form={form} setForm={setForm} />*/}
-
-		{/*!carDetails ?
-				<CarsList cars={cars} setCarDetails={setCarDetails} form={form} setForm={setForm} /> :
-				<CarDetails car={carDetails} setCarDetails={setCarDetails} />
-        */} 
-        <div>
-          
-        </div>
+      
+    </div>
     </main>
   );
 }

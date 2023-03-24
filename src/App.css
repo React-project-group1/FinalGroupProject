@@ -1,31 +1,182 @@
-.App {
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: #ddcdc6;
+
+}
+
+h2, h3 {
+  font-family: 'Abril Fatface', cursive;
+  color: #ddcdc6;
+}
+
+.details-item > h3 {
+  text-align: center;
+  text-decoration: underline;
+  color: #202070;
+}
+
+p {
+  color:#202070;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+b {
+  color: #202070;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  text-align: center;
+  background-color: #202070;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  height: 420px;
+  width: 420px;
+}
+.forms {
+  background-color: #202070;
+  text-align: left;
+  margin: auto;
+}
+/* Item */
+.item-wrapper {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 25%;
+  margin: 1%;
+}
+.item-card {
+  height: 100%;
+  width: 100%;
+  border: solid 2px #202070;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  overflow: hidden;
+  transition: 1s ease;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.item-image {
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  transition: 1s ease;
+}
+.item-image:hover {
+  scale: 1.1;
 }
 
-.App-link {
-  color: #61dafb;
+/* ItemList */
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #202070;
+}
+
+/* Item Details */
+.details {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px 30px 30px 30px;
+}
+.details-image {
+  max-width: 600px;
+  max-height: 600px;
+  width: auto;
+}
+.details-item {
+  width: 33.3%;
+  font-size: 18px;
+}
+.buttons-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+/* Update Form */
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  font-size: 18px;
+}
+.add-form {
+  background-color: #202070;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
+}
+.button {
+  font-family: 'Abril Fatface', cursive;;
+  border: solid 2px #202070;
+  background-color: #202070;
+  padding: 10px 40px;
+  color: #DDCDC6;
+  font-size: 18px;
+  transition: 1s ease;
+}
+.button:hover {
+  background-color: #DDCDC6;
+  color: #202070;
+}
+.view-all { /* button */
+  margin: 5px 0px 30px 60px;
+}
+
+.add-button { /* button */
+  text-align: center;
+  border: solid 2px #DDCDC6;
+  margin-bottom: 20px;
 }
 
 
+.boxy {
+  padding: 20px;
+  border: solid 2px white;
+  border-radius: 10px;
+  box-shadow: #DDCDC6;
+
+}
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Auth-form {
+  width: 420px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}

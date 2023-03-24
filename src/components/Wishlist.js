@@ -3,7 +3,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './CarGrid.css'
-export function CarGrid(){
+
+export function Wishlist(){
     return (
         <Row xs={1} md={2} lg={3} className="g-4">
           {Array.from({ length: 12 }).map((_, idx) => (
@@ -11,9 +12,23 @@ export function CarGrid(){
               <Card
                bg={"secondary"}
                >
-                <Card.Img variant="top" src="holder.js/100px160" />
+                <Card.Img variant="" src="holder.js/100px160" />
                 <Card.Body>
                   <Card.Title >Car Name</Card.Title>
+                  <Card.Text>
+                    <ul>
+                    <li>Price:</li>
+                    <li>Model:</li>
+                    <li>Engine:</li>
+                    <li>Colour:</li>
+                    <li>Mileage:</li>
+                    <li>Description:</li>
+                    
+                    </ul>
+                    
+                   
+                   
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Col>

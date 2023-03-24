@@ -11,20 +11,20 @@ export function Navigation () {
       
       <Navbar bg="secondary" variant="dark" fixed="top" className='Navbar'>
         <Container>
-        <Navbar.Brand href="#home">Home</Navbar.Brand>
+        <Navbar.Brand href="http://localhost:3000/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="http://localhost:3000/showroom">Showroom</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="http://localhost:3000/about">About</Nav.Link>
            
           </Nav>
           <Nav>
-            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="http://localhost:3000/sign-in">Sign in</Nav.Link>
              <NavDropdown title="Your Account" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#profile">Your Profile</NavDropdown.Item>
               <NavDropdown.Item href="#listings">Your Listings</NavDropdown.Item>
-              <NavDropdown.Item href="#savedcars">Your Saved Cars</NavDropdown.Item>
+              <NavDropdown.Item href="http://localhost:3000/wishlist">Your Saved Cars</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#logout">Log Out</NavDropdown.Item>
             </NavDropdown>
