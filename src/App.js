@@ -1,5 +1,5 @@
-import logo from './PBS.jpg';
-import './App.css'
+import logo from './PBAauto.png';
+import './styles/App.css'
 import React, { useState, useEffect } from 'react';
 import Auth from './components/Auth';
 import AppRouter from './components/AppRouter';
@@ -15,7 +15,7 @@ function App() {
   return (
     <main>
     <div className='header'>
-      <img src={logo}    className="logo" alt="logo" />
+      <img src={logo} alt="logo" />
         <Navigation/>
         <AppRouter/>
         

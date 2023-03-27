@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './CarGrid.css'
+import '../styles/CarGrid.css'
 
 export function Wishlist(){
     return (
