@@ -9,14 +9,6 @@ function App() {
 	//const [carDetails, setCarDetails] = useState('');
 	const [form, setForm] = useState(false);
 
-  const fetchAllCars = async () => {
-    await fetch('http://localhost:8000/cars')
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
-  
-  fetchAllCars();
-
   const toggleForm = () => {
 		setForm(!form);
 	}
