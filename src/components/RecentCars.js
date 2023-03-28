@@ -1,19 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 function RecentCars() {
     const [index, setIndex] = useState(0);
+    const [carImages, setCarImages] = useState([]);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  async function getAllImages() {
+    const res = await fetch('http://localhost:8000/cars')
+    const data = await res.json();
+
+    let images = data.map((car) => car.imagePath);
+    setCarImages(images);
+  }
+  
+  
+  const randomIndex = Math.floor(Math.random() * carImages.length);
+
+  useEffect(() => {
+    getAllImages();
+  }, [])
 
   return (
     <Carousel fade activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src=""
+          src={carImages[randomIndex]}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -24,7 +40,7 @@ function RecentCars() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          src={carImages[randomIndex]}
           alt="Second slide"
         />
 
@@ -36,7 +52,7 @@ function RecentCars() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          src={carImages[randomIndex]}
           alt="Third slide"
         />
 
