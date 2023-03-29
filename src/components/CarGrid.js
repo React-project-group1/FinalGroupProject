@@ -6,17 +6,20 @@ import '../styles/CarGrid.css'
 import { useState, useEffect } from 'react';
 import { CarDetails } from './CarDetails';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Button from 'react-bootstrap/Button';
 
 export function CarGrid(){
   const [cars, setCars] = useState({});
   const [carsCopy, setCarsCopy] = useState({}); // All cars data
-  const [showCar, setShowCar] = useState(false);
-  const [carDetails, setCarDetails] = useState(); // single car info
+  // const [showCar, setShowCar] = useState(false);
+  const [carDetails, setCarDetails] = useState({}); // single car info
+  const [modalShow, setModalShow] = useState(false);
 
   async function fetchAllCars () {
     const res = await fetch('http://localhost:8000/cars')
     const carsData = await res.json();
     setCars(carsData);
+    // setShowCar(!showCar);
     setCarsCopy(carsData);
   }
 
@@ -24,7 +27,7 @@ export function CarGrid(){
     const res = await fetch(`http://localhost:8000/cars/${id}`)
     const singleCar = await res.json();
     setCarDetails(singleCar);
-    setShowCar(!showCar);
+    setModalShow(true);
   }
 
   useEffect(() => {
@@ -59,9 +62,10 @@ export function CarGrid(){
           </Dropdown.Toggle>
   
           <Dropdown.Menu>
-          {/* <Dropdown.Header> Select a manufacturer</Dropdown.Header> */}
+            <Dropdown.Item eventKey={'Bentley'} href="#">Bentley</Dropdown.Item>
             <Dropdown.Item eventKey={'BMW'} href="#">BMW</Dropdown.Item>
             <Dropdown.Item eventKey={'Ferrari'} href="#">Ferrari</Dropdown.Item>
+            <Dropdown.Item eventKey={'Ford'} href="#">Ford</Dropdown.Item>
             <Dropdown.Item eventKey={'Lamborghini'} href="#">Lamborghini</Dropdown.Item>
             <Dropdown.Item eventKey={'Mercedes'} href="#">Mercedes</Dropdown.Item>
             <Dropdown.Item eventKey={'Porsche'} href="#">Porsche</Dropdown.Item>
@@ -96,9 +100,13 @@ export function CarGrid(){
           ))}
         </Row>
 
-        {showCar ?         
-          <CarDetails carDetails={carDetails} /> 
-        : null }
+        {/* Single car view, toggled by clicking on an image */}
+        <CarDetails
+          carDetails={carDetails}
+          show={modalShow}
+          onHide={() => setModalShow(false)} 
+        />
+
       </>
       );
 }
