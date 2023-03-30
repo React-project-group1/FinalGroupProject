@@ -56,6 +56,7 @@ export function CarGrid(){
     
     return (
       <>
+      <div className='my-4'>
         <Dropdown onSelect={handleCars} align={"start"} className="d-inline mx-2" autoClose="outside, true">
           <Dropdown.Toggle  id="make-Filter">
             Select Make
@@ -84,14 +85,15 @@ export function CarGrid(){
             <Dropdown.Item eventKey={'High to Low'} href="#">High to Low</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-
         <button className='btn btn-dark' onClick={clearFilter}>View All</button>
+      </div>
+
         
         <Row xs={1} md={2} lg={3} className="g-4 mx-4">
           {Array.from({ length: cars.length }).map((_, idx) => (
             <Col>
               <Card onClick={() => fetchSingleCar(cars[idx].id)} bg={"secondary"} className="card-img-top">
-                <Card.Img variant="top" src={cars[idx].imagePath} />
+                <Card.Img variant="top" src={cars[idx].imagePath} className='card-img' />
                   <Card.Body>
                     <Card.Title>{cars[idx].make}, {cars[idx].model}</Card.Title>
                   </Card.Body>

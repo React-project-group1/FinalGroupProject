@@ -4,10 +4,19 @@
   color: #ddcdc6;
 }
 
+main {
+  background-color: #4A4D4E;
+  height: 100%;
+  text-align: center;
+  padding-bottom: 10%;
+}
 
 h2, h3 {
   font-family: 'Abril Fatface', cursive;
   color: #ddcdc6;
+}
+h4 {
+  color: #202070;
 }
 
 .details-item > h3 {
@@ -28,7 +37,7 @@ b {
 
 .header {
   text-align: center;
-  background-color: #202070;
+  background-color: #4A4D4E;
 }
 .logo {
   height: 420px;

@@ -17,10 +17,8 @@ function App() {
     <div className='header'>
       <img src={logo} alt="logo" />
         <Navigation/>
-        <AppRouter/>
-        
-      
     </div>
+        <AppRouter/>
     </main>
   );
 }

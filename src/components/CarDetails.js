@@ -43,7 +43,7 @@ export function CarDetails(props) {
     }}
       >
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+          <Modal.Title id="contained-modal-title-vcenter" className='text-#202070'>
             {props.carDetails.make}, {props.carDetails.model}
           </Modal.Title>
         </Modal.Header>
@@ -51,10 +51,10 @@ export function CarDetails(props) {
               <img className='img-fluid' src={props.carDetails.imagePath} />
               <br />
               <br />
-              <h2>Cost: {pounds.format(props.carDetails.cost)}</h2>
-              <h2>Mileage: {props.carDetails.mileage}</h2>
-              <h2>Engine Size: {props.carDetails.engineSize}l</h2>
-              <h2>Description: {props.carDetails.description}</h2>
+              <p>Cost: {pounds.format(props.carDetails.cost)}</p>
+              <p>Mileage: {props.carDetails.mileage}</p>
+              <p>Engine Size: {props.carDetails.engineSize}l</p>
+              <p>Description: {props.carDetails.description}</p>
         </Modal.Body>
         <Modal.Footer>
           <Button  onClick={props.onHide}>Purchase</Button>
