@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 import HomePage from '../pages/HomePage';
+import OrderHistory from '../pages/OrderHistory';
 import ShowroomPage from '../pages/ShowroomPage';
 import WishlistPage from '../pages/WishlistPage';
 import Auth  from './Auth';
@@ -23,7 +24,10 @@ function AppRouter() {
             <Route path='/sign-in' element={
                 <Auth/>
             } />
-            
+            <Route path='/order-history' element={
+                <OrderHistory/>
+            }/>
+
             <Route path='/wishlist' element={
                 <WishlistPage/>
             } />

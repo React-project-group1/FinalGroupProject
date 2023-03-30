@@ -16,7 +16,7 @@ export function Navigation () {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="http://localhost:3000/showroom">Showroom</Nav.Link>
-            <Nav.Link href="http://localhost:3000/about">About</Nav.Link>
+            <Nav.Link href="http://localhost:3000/order-history">Order History</Nav.Link>
            
           </Nav>
           <Nav>
